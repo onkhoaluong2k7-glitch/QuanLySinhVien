@@ -19,7 +19,8 @@ private:
 
 public:
     DanhSachQuanLy(){head = nullptr;}
-    
+
+    // Void to add the new student
     void AddStudent(Student st){
         Node* newNode = new Node();
         newNode->Data = st;
@@ -28,7 +29,7 @@ public:
     }  
 
     bool DeleteStudent( string id){
-        if (head == nullptr) return false;
+        if (head == nullptr) return false; // In case the empty list
         // In case the node needs to be delete at the head
         if (head->Data.id == id){
             Node *tmp = head;
@@ -49,6 +50,20 @@ public:
         prev->next = curr->next;
         delete curr;
         return true;
+    }
+
+    // Function to find a student
+    bool FindStudent( string id ){
+        if (head == nullptr) return false;// Empty list
+
+        Node* curr = head;
+        // founding
+        while ( curr != nullptr && curr->Data.id != id){
+            curr = curr->next;
+        }
+
+        if (curr == nullptr) return false;// Not found
+        return true;// Founded
     }
 };
 
