@@ -19,6 +19,14 @@ private:
 
 public:
     DanhSachQuanLy(){head = nullptr;}
+    
+    void AddStudent(Student st){
+        Node* newNode = new Node();
+        newNode->Data = st;
+        newNode->next = head;
+        head = newNode;
+    }
+
 };
 
 int main(){
