@@ -1,0 +1,5 @@
+*.exe
+*.o
+/Debug/
+/Release/
+.vscode/
