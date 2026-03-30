@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <c
+
 using namespace std;
 
 struct Student{
